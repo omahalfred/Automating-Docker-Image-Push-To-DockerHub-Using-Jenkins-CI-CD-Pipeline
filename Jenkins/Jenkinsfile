@@ -31,7 +31,7 @@ pipeline {
 				echo 'tagging...'
 				sh "docker tag alfredrozay/alfred-image docker.io/alfredrozay/alfred-new-application:$BUILD_ID"
 				echo 'pushing...'
-				sh "docker.io/alfredrozay/alfred-new-application:$BUILD_ID"
+				sh "docker push docker.io/alfredrozay/alfred-new-application:$BUILD_ID"
 			}
 		}
 
